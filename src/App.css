@@ -1,0 +1,64 @@
+:root {
+  --main-color: #e74c3c;
+}
+
+.App {
+  font-family: 'Raleway', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 1s ease;
+  background-color: var(--main-color);
+}
+
+.quote-box {
+  max-width: 700px;
+  padding: 40px 50px;
+  border-radius: 3px;
+  background-color: white;
+  transition: color 1s ease;
+  color: var(--main-color);
+}
+
+#text {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.btn-primary {
+  margin: 0 5px;
+  transition: background-color 1s ease; 
+  background-color: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+}
+
+#new-quote {
+  float: right;
+}
+
+@media (max-width: 700px) {
+  .quote-box {
+    max-width: 90%;
+  }
+  #text {
+    font-size: 1.5rem;
+  }
+  .btn-primary {
+    margin: 0 1px;
+  }
+}
+
+@media (max-width: 330px) {
+  .btn-primary {
+    font-size: .6rem !important;
+  }
+}
+
+.fade {
+  animation: fade-in-keyframes 1.5s;
+}
+@keyframes fade-in-keyframes {
+  from {opacity: 0}
+  to {opacity: 1}
+}
